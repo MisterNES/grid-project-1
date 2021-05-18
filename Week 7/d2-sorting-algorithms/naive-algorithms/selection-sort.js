@@ -1,8 +1,8 @@
 /*
 Selection sort works very similar to Bubble Sort, but it works on sending the
-largest elements up to the end of the array instead of sending the smallest
-down. For the same reasons as Bubble Sort, Selection Sort is not very efficient
-at all.
+smallest elements down to the beginning of the array instead of sending the
+largest elements up. For the same reasons as Bubble Sort, Selection Sort is not
+very efficient at all.
 
 The algorithm can be summarized as follows:
 1. Set MIN to location 0.
