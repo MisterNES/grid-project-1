@@ -11,6 +11,8 @@ well:
 -next: the next node in the list
 -previous: the previous node in the list
 
+
+
 Linked Lists contain ORDERED DATA, similar to arrays. While they exhibit some
 very similar traits, the difference is how data is stored.
 
@@ -69,10 +71,78 @@ The first step is to create a Node class:
 */
 
 class _Node {
-  constructor() {}
+  constructor(value) {
+    this.value = value;
+    this.next = null;
+    //this.prev = null;
+  }
 }
 //Then we can implement the Linked List class:
 
 class LinkedList {
-  constructor() {}
+  constructor() {
+    this.head = null;
+    this.tail = null;
+  }
+  add(value) {
+    if (!this.head) {
+      this.head = new _Node(value);
+    } else {
+      this._add(value);
+    }
+  }
+  _add(value) {
+    let curr = this.head; //start at head
+    while (curr.next) {
+      //keep traversing until reaching node with NO next property(tail)
+      curr = curr.next;
+    }
+    curr.next = new _Node(value); //once we have reached the end, we create a new Node (new tail)
+  }
+
+  size() {
+    let count = 0;
+    let node = this.head; //start at head
+
+    while (node) {
+      //while we are landing on a node
+      count++; //increment the count by one
+      node = node.next; //
+    }
+    return count;
+  }
+
+  insertAt(value, idx) {
+    if (idx === 0) { //If we are starting at the head
+      const prevHead = this.head; //old head
+      this.head = new _Node(value); //new head
+      this.head.next = prevHead; //new head pointing its next prop to old head
+    } else {
+      this._insertAt(value, idx); //otherwise see below
+    }
+  }
+  _insertAt(value, idx) { //if we are inserting anywhere other than head
+    let curr = this.head; //start at head
+    let currIdx = 0; //tracking the index as we traverse
+    let prev; //instantiate a prev variable
+
+    while (currIdx < idx) { //as long as the currIdx is less than the target idx
+      prev = curr; //prev is assigned to the current element
+      curr = curr.next; //update curr to the next element
+      currIdx++; //increment the count for the idx we are currently on
+    }
+    const newNode = new _Node(value); //creating a new NODE
+    prev.next = newNode; //last element before target's next property is now the newNode
+    newNode.next = curr; // the element that I landed on for target Idx is not the next for my newNode
+    return true; //return true to indicate successful insertion
+  }
 }
+
+const ll = new LinkedList()
+ll.add(1)
+ll.add(2)
+ll.add(4)
+ll.insertAt(0, 0)
+ll.insertAt(3, 3)
+
+console.log(ll)
