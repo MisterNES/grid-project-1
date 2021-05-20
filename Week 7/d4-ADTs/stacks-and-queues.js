@@ -46,22 +46,67 @@ Type	        Name	    Description	                                    Returns
 Insertion	    enqueue	    Adds a Node to the back of the Queue.	        Integer - New size of Queue
 Deletion	    dequeue	    Removes a Node from the front of the Queue.	    Node removed from front of Queue
 Meta	        size	    Returns the current size of the Queue.	        Integer
+
+
 */
 
-class Node {
-    constructor() {
-        
-    }
-}
+// class _Node {
+//     constructor(value) {
+//         this.value = value;
+//         this.next = null;
+//     }
+// }
 
-class Stack{
-    constructor() {
+//We will be implementing stacks and queues as arrays
 
-    }
+class Stack {
+  constructor() {
+    this.store = new Array();
+  }
+  size() {
+    //return the length of the stack
+    return this.store.length;
+  }
+
+  push(ele) {
+    //this will add element to end of stack
+    this.store.push(ele);
+    return true;
+  }
+
+  pop() {
+    //remove the last element
+    return this.store.pop();
+  }
+
+  peek() {
+    //return the last element
+    return this.store[this.store.length - 1];
+  }
 }
 
 class Queue {
-    constructor() {
-        
-    }
+  constructor() {
+    this.store = new Array();
+  }
+
+    enqueue(ele) {
+        //adds ele to end of queue
+        this.store.push(ele)
+        return true;
+  }
+
+    dequeue() {
+        //remove the first element
+        return this.store.shift();
+  }
+
+    size() {
+        return this.store.length;
+  }
+
+    peek() {
+        //return the first element
+      return this.store[0]
+  }
 }
