@@ -14,7 +14,7 @@ Consider this implementation of fibonacci:
 function tabulatedFib(n) {
   // create a blank array with n reserved spots
   let table = new Array(n);
-
+if (table[n]) return table[n]
   // seed the first two values
   table[0] = 0;
   table[1] = 1;

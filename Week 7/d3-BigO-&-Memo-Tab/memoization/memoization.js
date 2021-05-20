@@ -1,16 +1,20 @@
 /*
 Memoization allows us to store the results of previous calculations in an object
-in key:value pairs. -It allows us to save time on future calculations as the
+in key:value pairs. 
+-It allows us to save time on future calculations as the
 function can first check to see if a value exists in the memo, and if so, will
-simply return it. -There is a trade off: what we gain in time, we can lose in
+simply return it. 
+-There is a trade off: what we gain in time, we can lose in
 storage, however, it's usually a good trade-off when data is large.
 
-There are two main features of functions that implement memoization: 1. The
-    function is recursive. 2. There exists an additional data structure (usually
+There are two main features of functions that implement memoization: 
+1. The function is recursive. 
+2. There exists an additional data structure (usually
     an object): the MEMO
 
 You CANNOT apply this to just any recursive problem...there must be an
-"overlapping subproblem structure" Ex: Using pennies, nickels, dimes, and
+"overlapping subproblem structure" 
+Ex: Using pennies, nickels, dimes, and
 quarters, what is the smallest combination of coins that total 27 cents?
         - In this problem, there would be a sub problem of finding the 
         smallest coin combo for 25 cents as there is really only one for
@@ -24,7 +28,6 @@ function factorial(n) {
     return n * factorial(n - 1);
 }
 
-factorial(6);       // => 720, requires 6 calls
 factorial(6);       // => 720, requires 6 calls
 factorial(5);       // => 120, requires 5 calls
 factorial(7);       // => 5040, requires 7 calls
@@ -53,7 +56,7 @@ factorialMemo(7);       // => 5040, requires 2 calls
 memo;   // => { '2': 2, '3': 6, '4': 24, '5': 120, '6': 720, '7': 5040 }
 
 //The above utilizes a global variable which is not preferable. It will also build
-//a bigger tree to house data (see illustration in homework). We an correct 
+//a bigger tree to house data (see illustration in homework). We can correct 
 //this by utilizing javascript default arguments. Because of this, we will only
 //need to explore the subtree fully once, rather than several times as would be 
 //required with the global object.

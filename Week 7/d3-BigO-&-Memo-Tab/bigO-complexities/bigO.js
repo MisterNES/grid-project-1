@@ -5,8 +5,8 @@ the size of the input.
 
 Big picture ideas:
 1. function should be defined in terms of the size of the input
-2. Smaller Big-O function is more desireable than a larger one. -We want to use
-    a minimal amount of time and space.
+2. Smaller Big-O function is more desireable than a larger one. 
+  -We want to use a minimal amount of time and space.
 3. Big-O describes the worst case scenario for our code
 4. Big-O function should be simplified to show only its most dominant
     mathematical term.

@@ -1,0 +1,82 @@
+/* Main Body and Nav Menu Styles */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+.nyt-masthead {
+  text-align: center;
+  margin: 20px auto 6px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+}
+
+.navbar ul {
+  margin: 10px 0 5px;
+}
+
+.navbar li {
+  display: inline;
+  padding-right: 7px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.date {
+  display: flex;
+  justify-content: space-between;
+}
+
+hr {
+  margin: 10px 0 0;
+  padding-top: 5p;
+  color: lightgray;
+  opacity: 0.3;
+}
+
+/* Main Grid Styles */
+
+
+
+/* Grid Section 1 - Flex Styles */
+
+
+
+/* Grid Section 2 - Nested Grid Styles */
+
+
+
+/* Grid Section 3 Styles */
+
+
+
+/* Remaining Section Styles */
+
+
+
+/* Responsive Styles */
+
+@media (min-width:1024px) {
+  .nyt-masthead {
+    width: 430px;
+    height: 58px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .navbar {
+    display: none;
+  }
+  .nyt-masthead {
+    width: 225px;
+    height: 31px;
+    margin: 3px auto 0px;
+  }
+}
