@@ -1,0 +1,188 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap'); */
+
+
+body{
+    /* font-family: 'Dancing Script', cursive; */
+    padding: 0;
+    margin: 0;
+}
+
+.navbar__container{
+    width: 100%;
+    height: 10vh;
+    background-color: brown;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar__header{
+    margin: 0%;
+    font-size: xxx-large;
+}
+
+.selectors__container{
+    display: flex;
+    
+}
+
+.selectors__header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 5vh;
+    border: 2px solid black;
+    margin: 0;
+    background-color: lightgray;
+
+}
+
+.selectors__labels{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 5vh;
+    border: 2px solid black;
+    margin: 0;
+    justify-content: space-around;
+    background-color: lightgray;
+
+}
+
+.selectors__label-text{
+    font-size: xx-large;
+    
+}
+
+.selectors__container-text{
+    margin: 0;
+    font-size: xx-large;
+    width: 50%;
+    background-color: lightgray;
+    border: 1px solid black;
+}
+
+
+.selectors__container-bullet{
+    list-style:circle;
+}
+
+.selectors__examples{
+    margin: 0;
+    width: 100%;
+    height: 37vh;
+    background-color: lightgray;
+}
+
+.selectors__examples{
+    height: 100%;
+    width: 100%;
+}
+
+.selectors__examples-box{
+    border: 1px solid black;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.selectors__examples-box-header{
+    width: fit-content;
+    font-size: xxx-large;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.selectors__examples-box-text{
+    font-size: xx-large;
+    margin: 25px;
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    border: 4px solid black;
+    margin: 25px;
+    
+}
+
+#circle{
+    width: 100px;
+    height: 100px;
+    border: 4px solid black;
+    margin: 25px;
+    border-radius: 50%;
+}
+
+.descendant{
+    font-size: xx-large;
+    margin: 25px;
+}
+
+.direct{
+    font-size: xx-large;
+    margin: 25px;
+}
+
+h3{
+    font-size: xx-large;
+}
+
+h4{
+    font-size: xx-large;
+}
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------ */
+
+
+/*  TYPE SELECTOR DEMO */
+
+p{
+    color: purple;
+};
+
+/* --------------------*/
+/* CLASS SELECTOR DEMO */
+
+.box{
+    background-color: purple;
+};
+
+/* ------------------- */
+/* ID SELECTOR DEMO */
+#circle{
+    background-color: purple;
+}
+
+/* ------------------- */
+/* DESCENDANT SELECTOR DEMO */
+
+.parent .descendant{
+    color: purple;
+}
+
+/* ------------------- */
+/* DIRECT DESCENDANT SELECTOR DEMO */
+
+.parent > .direct{
+    color: purple;
+}
+
+/* ------------------- */
+/* ADJACENT SIBLING SELECTOR DEMO */
+
+h3 + h4 {
+    color: purple;
+}
+
+/* ------------------- */
+/* BOX SHADOW DEMO */
+.box{
+
+    /* box-shadow: 2px 2px 0 4px rgba(163, 10, 10, 1); */
+}

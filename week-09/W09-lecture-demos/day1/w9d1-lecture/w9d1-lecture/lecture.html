@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./lecture.css">
+    <title>W9D1</title>
+</head>
+<body>
+    <div class="navbar__container">
+        <h1 class="navbar__header">Week 9 Day 1 Lecture!</h1>
+    </div>
+    <h1 class="selectors__header">What are the different types of selectors?</h1>
+    <div class="selectors__labels">
+        <div class="selectors__label-text">Selector Name</div>
+        <div class="selectors__label-text">Selector Example</div>
+    </div>
+    <div class="selectors__container">
+        <ul class="selectors__container-text">
+            <li class="selectors__container-bullet">Type selectors -- matches elements by node name </li>
+            <li class="selectors__container-bullet">Class selectors -- matches elements by class name</li>
+            <li class="selectors__container-bullet">ID selectors -- matches elements by ID name</li>
+            <li class="selectors__container-bullet">Universal selectors -- matches elements of any type</li>
+            <li class="selectors__container-bullet">Attribute selectors -- matches elements based on the presence </li>
+          or value of a given attribute (e.g. a[title] matches all a elements with a title attribute)
+            <li class="selectors__container-bullet">Descendant selectors -- matches elements where element B is a descendant of element A </li>
+            <li class="selectors__container-bullet">Direct child selectors -- matches elements where element B is a DIRECT descendant of element A</li>
+            <li class="selectors__container-bullet">Adjacent sibling selectors -- matches elements where element B follows right after A</li>
+            <li class="selectors__container-bullet">Pseudo-Class -- attaches to a css selector to specify a special state</li>
+            <li class="selectors__container-bullet">Pseudo-Selector -- attaches to a css selector to specify a oseudo-element as a child of the property selected</li>
+        </ul>
+        <ul class="selectors__container-text">
+            <li class="selectors__container-bullet">div, li, a, p</li>
+            <li class="selectors__container-bullet">.className</li>
+            <li class="selectors__container-bullet">#idName</li>
+            <li class="selectors__container-bullet">*</li>
+            <li class="selectors__container-bullet">a[attributeName]</li>
+            <br>
+            <li class="selectors__container-bullet">div p  (would select every p tag that is a descendant of a div tag)</li>
+            <li class="selectors__container-bullet">div > p  (would select every p tag that is a DIRECT descendant of a div tag)</li>
+            <br>
+            <li class="selectors__container-bullet">div + p  (would select every p tag that is a right after a div tag)</li>
+            <li class="selectors__container-bullet">div:hover (when hovered, do the following things....)</li>
+            <li class="selectors__container-bullet">div::before (before the selected div, do the following things....)</li>
+        </ul>
+    </div>
+    <div class="selectors__examples">
+        <div class="selectors__examples">
+            <h1 class="selectors__examples-box-header">Type Selector</h1>
+            <div class="selectors__examples-box">
+                <div class="selectors__examples-box-text">grab the element with the type of "p" and give it a color of purple</div>
+                <p class="selectors__examples-box-text">This is the text we want to change</p>
+            </div>
+            <h1 class="selectors__examples-box-header">Class Selector</h1>
+            <div class="selectors__examples-box">
+                <div class="selectors__examples-box-text">grab the element with the class of "box" and give it a background-color of purple</div>
+                <div class="box" id="id-box"></div>
+            </div>
+            <h1 class="selectors__examples-box-header">Id Selector</h1>
+            <div class="selectors__examples-box">
+                <div class="selectors__examples-box-text">grab the element with the id of "circle" and give it a background-color of purple</div>
+                <div id="circle"></div>
+            </div>
+            <h1 class="selectors__examples-box-header">Descendant Selector</h1>
+            <div class="selectors__examples-box">
+                <div class="selectors__examples-box-text">grab the element with the class of "descendant" that is a descendant of "parent" and give it a color of purple</div>
+                <div class="parent">
+                    <div class="descendant">HOW ABOUT NOW?</div>
+                    <div>
+                        <div class="descendant">Change my color to purple</div>
+                    </div>
+                </div>
+            </div>
+            <h1 class="selectors__examples-box-header">Direct Child/Descendant selector</h1>
+            <div class="selectors__examples-box">
+                <div class="selectors__examples-box-text">grab the element with the class of "direct" that is a direct-descendant of "parent" and give it a color of purple</div>
+                <div class="parent">
+                    <div class="direct" id="direct-id">Change my color to purple</div>
+                    <div>
+                        <div class="direct" >Do not change my color!</div>
+                    </div>
+                </div>
+            </div>
+            <h1 class="selectors__examples-box-header">Adjacent Sibling Selector</h1>
+            <div class="selectors__examples-box">
+                <div class="selectors__examples-box-text">grab the element with the type of "h4" that is an adjacent sibling to an "h3" element and give it a color of purple</div>
+                <h3>Do not touch me</h3>
+                <h4 class="not">Change my Color</h4>
+                <h4>Do not touch me</h4>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+

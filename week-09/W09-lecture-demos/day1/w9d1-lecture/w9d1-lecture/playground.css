@@ -1,0 +1,27 @@
+
+/* Example of importing multiple CSS files into one */
+
+@import "/w9d1-lecture/lecture.css";
+@import "/w9d1-lecture/navbar.css";
+
+
+
+/* Specificity examples */
+
+/* 
+Order of Specificity:
+
+1: Id
+2: Class
+3: Tag
+
+*/
+/* 
+
+h1 h2 h3 h4 div p a span{
+
+}
+
+.banana .apple {
+
+} */

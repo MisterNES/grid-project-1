@@ -33,7 +33,7 @@
 
     In this problem, you will write a function that allows you to search a graph
     using its adjacency list to determine if two nodes are friends or mutal friends
-    with eachother.
+    with each other.
 
     Your function will take a starting name, ending name and an adjacency List.
     Your function will search the graph in BREADTH-FIRST ORDER to determine if you
